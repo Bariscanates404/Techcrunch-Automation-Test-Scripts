@@ -19,7 +19,7 @@ public class Techcrunch_Case {
     WebDriver driver;
     static final String constantCompanyTag = "| TechCrunch";    // If the company or name changes we have to set the company browser title
     static final int constantCompanyTagLength = 12;             // The length of company browser title
-    static int workingLinks = 0;                          // To verify working links (at line 90)
+    static int workingLinks = 0;                                // To verify working links (at line 90)
 
     @Before
     public void setUp() {
