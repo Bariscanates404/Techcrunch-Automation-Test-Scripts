@@ -72,12 +72,12 @@ public class Techcrunch_Case {
         String fullContentNewsTitle = driver.findElement(By.cssSelector("article header h1")).getText();
         String browserTitle = driver.getTitle();
         if (browserTitle.substring(browserTitle.length() - constantCompanyTagLength).equals(constantCompanyTag)) {
-            browserTitle = browserTitle.substring(0, browserTitle.length() - (constantCompanyTagLength+1));
+            browserTitle = browserTitle.substring(0, browserTitle.length() - (constantCompanyTagLength + 1));
             browserTitle = browserTitle.replaceAll("[/r]", "");
             fullContentNewsTitle = fullContentNewsTitle.replaceAll("[/r]", "");
             Assert.assertEquals(fullContentNewsTitle, browserTitle);
         } else {
-            Assert.assertEquals(fullContentNewsTitle, browserTitle);
+            Assert.fail();
         }
 
         List<WebElement> linkList = driver.findElements(By.cssSelector(".article-content>p a"));
